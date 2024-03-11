@@ -289,9 +289,7 @@ const setupModal = () => {
                 if(cat) {
                     const {
                         attributes,
-                        name,
-                        for_sale = false,
-                        price = 0
+                        name
                     } = cat
 
                     const modalTitle = modal.querySelector('.modal-title')
@@ -303,6 +301,7 @@ const setupModal = () => {
 
                     html += '<div class="d-grid gap-2 pt-3">'
                     html += `<a href="${attributes.find(a => a.trait_type === 'magic_eden_link').value}" target="_blank" class="btn btn-magiceden">View on MagicEden</a>`
+                    html += `<a href="./svg-generator?natcat=${catId}" target="_blank" class="btn btn-primary">Generate High-res pfp img</a>`
                     html += '</div>'
 
                     html += '</div>'
